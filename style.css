@@ -1,0 +1,230 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+img {
+    display: block;
+}
+ol:not(article ol),
+ul:not(article ul) {
+    list-style: none;
+}
+ol,
+ul {
+    padding-left: 0;
+    margin: 0;
+}
+a {
+    /* Places underlines below the descenders */
+    text-underline-position: under;
+
+
+    /* Sets the thickness as a percentage of the font size */
+    text-decoration-thickness: 8;
+}
+html {
+
+    scroll-behavior: smooth;
+}
+:focus:not(:focus-visible) {
+    outline: none;
+}
+label,
+button,
+select,
+summary,
+[type=radio],
+[type=submit],
+[type=checkbox] {
+    cursor: pointer;
+}
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+
+}
+/* .space{
+    height: 20vh;
+} */
+.GWC-Logo{
+    width: 130px;
+    /* border: 1px solid red; */
+}
+.bg-circle{
+    position: absolute;
+    z-index: -999;
+    top: -130vh;
+    right: -25vw;
+    height: 256vh;
+    width: 120rem;
+    rotate: 45deg;
+    background: #000;
+    background: rgb(245, 247, 254);
+    border-radius: 100vw;
+    /* overflow: hidden; */
+}
+
+.wrapper{
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav,.nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav ul{
+    gap: 3.8rem;
+    padding: 2em 0;
+}
+.nav ul li{
+    transition-duration: 300ms;
+    color: rgb(82, 95, 129);
+}
+.nav ul li:hover{
+    color: rgb(69, 128, 235);
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+.hero{
+    padding-top: 6rem;
+    /* outline: 2px solid red; */
+}
+.hero-title,.card-section-title{
+    padding: 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(49, 62, 91);
+    font-size: clamp(1rem, 2vw + 1.2rem, 6rem);
+    font-weight: 500;
+    max-width: 750px;
+    margin: 0 auto;
+    /* outline: 2px solid red; */
+}
+.hero-image-container{
+    margin-top: 2.4rem;
+    position: relative;
+    /* outline: 2px solid blue; */
+}
+.hero-image{
+    position: absolute;
+}
+.h-image-1{
+    margin: 0 auto;
+    /* outline: 2px solid red; */
+}
+.h-image-2{
+    top: -165px;
+    right: 50px;
+    animation: left-right 3s infinite ease-in-out;
+}
+.h-image-3{
+    bottom: 35px;
+    right: 190px;
+    animation: top-bottom 5s infinite ease-in-out;
+    
+}
+.h-image-4{
+    bottom: 115px;
+    left: 50px;
+    animation: left-right 3s infinite ease-in-out;
+}
+
+@keyframes left-right {
+    50%{
+        transform: translateX(-1.1rem);
+    }
+}
+@keyframes top-bottom {
+    50%{
+        transform: translateY(-1.1rem);
+    }
+}
+.gradiant-text{
+    /* text-align: center; */
+    margin: 0 auto;
+    letter-spacing: 1px;
+    font-size: .9rem;
+    font-weight: 500;
+    color: rgb(69, 128, 235);
+    width: max-content;
+    background: linear-gradient(to right,rgb(245, 247, 254),#fff);
+    padding: .8em .8em;
+    border-radius: 5px;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+    
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:stretch;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    height: 420px;
+    width: 300px;
+    padding: 3.5rem 2rem 0rem 2rem;
+    box-shadow: 0 40px 40px 2px rgba(0, 0, 0, .05);
+    border-radius: 1rem;
+    background: #fff;
+    /* outline: 2px solid red; */
+    transition: all 500ms;
+}
+.card::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,rgb(84, 223, 219),rgb(69, 140, 234));
+    z-index: -999;
+    border-radius: 1rem;
+}
+.card:hover{
+    background: transparent;
+}
+.card:hover > *{
+    color: #fff;
+}
+.card-image{
+    width: 110px;
+    position: absolute;
+    top: -30px;
+    left: 37%
+}
+.card-title, .card-content, .card-link{
+    text-align: center;
+    padding: .5rem 0;
+    transition: all 500ms;
+}
+.card-title{
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.card-content{
+    line-height: 2rem;
+    color: rgba(44, 44, 44, .7);
+}
+.card-link{
+    padding-top: 2rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: rgb(69, 128, 235)
+}
+.card-link:hover{
+    cursor: pointer;
+}
